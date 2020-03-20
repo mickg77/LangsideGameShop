@@ -52,12 +52,18 @@
 
     if($stmt->rowCount()>0){
       //echo "We have found something!!!";
+      echo '<ul class="list-group list-group-flush">';
       while($row=$stmt->fetch(PDO::FETCH_ASSOC)){
-        echo "<p>".$row['userid']." ".$row['username']." ".$row['role']."
-              <a href='display.php?delete=".$row['userid']."'>Delete</a>
-              <a href='display.php?amend=".$row['userid']."'>Update</a>
-              </p>";
-      }
+        echo '<li class="list-group-item">'
+          .$row['userid']." "
+          .$row['username']." "
+          .$row['role']."
+              <a class='btn btn-danger btn-sm'  href='display.php?delete=".$row['userid']."'>Delete</a>
+              <a class='btn btn-primary btn-sm' href='display.php?amend=".$row['userid']."'>Update</a>
+              </li>";
+      }//end of while loop
+      echo '</ul>';
+      
     }
 
     else {

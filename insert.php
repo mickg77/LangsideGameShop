@@ -34,23 +34,45 @@
     }
     
   ?>
-
-    <form name="form1" action="" method="POST">
-      <input type="text" name="namebox" placeholder="name..."  >
+  <div class="card" id="signup">
+    <div class="card-header">
+      Game Shop Sign Up
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Sign Up</h5>
+      <form name="form1" action="" method="POST">
+    <div class="form-group">
+      <label for="namebox">Name</label>
+      <input type="text" name="namebox" placeholder="name...">
+    </div>
+    <div class="form-group">
+      <label for="passwordbox">Password</label>
       <input type="password" name="passwordbox">
+    </div>
+    <div class="form-group">
+      <label for="emailbox">Email</label>
       <input type="email" name="emailbox" placeholder="email...">
-      <input type="date"  name="datebox">
-      <input type="text"  name="rolebox" placeholder="role">
-      <input type="submit" name="submit"> 
-    </form>
-<?php
+    </div>
+    <div class="form-group">
+      <label for="datebox">Date Of Birth</label>
+      <input type="date" name="datebox">
+    </div>
+    <div class="form-group">
+      <label for="rolebox">Role</label>
+      <input type="text" name="rolebox" placeholder="role">
+    </div>
+    <button type="submit" name="submit" class="btn btn-primary">
+        Submit
+      </button>
+  </form>
+    </div>
+  </div>
+  
+  <?php
    }//end of session check
   else {
     require('nav.php');
     echo ('<p>Please login</p>');
   }
   require('footer.php');
-?>      
-     
-        
-        
+?>
