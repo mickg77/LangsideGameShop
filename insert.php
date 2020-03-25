@@ -7,6 +7,11 @@
     if(isset($_POST['submit'])){
       //strip variables out of POST form
       $username =$_POST['namebox'];
+      
+      /*query the database at this point and check that the
+      user doesn't already exist ie check that the new query
+      doesn't return any rows*/
+      
       $password =$_POST['passwordbox'];
       $email    =$_POST['emailbox'];
       $date     =$_POST['datebox'];
@@ -44,6 +49,7 @@
     <div class="form-group">
       <label for="namebox">Name</label>
       <input type="text" name="namebox" placeholder="name...">
+      
     </div>
     <div class="form-group">
       <label for="passwordbox">Password</label>
@@ -71,7 +77,7 @@
   <?php
    }//end of session check
   else {
-    require('nav.php');
+ 
     echo ('<p>Please login</p>');
   }
   require('footer.php');

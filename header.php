@@ -25,7 +25,7 @@
 
           if(!isset($_SESSION['user'])){ 
             //don't display if logged in 
-            echo '<a class="nav-link" href="index.php">Login</a>'; 
+            echo '<a class="nav-link" href="index.php">Login(l)</a>'; 
           } 
           else {
             //don't display if logged out
@@ -35,10 +35,10 @@
 
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="display.php">Display</a>
+          <a class="nav-link" href="display.php">Display (d)</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="insert.php">Insert</a>
+          <a class="nav-link" href="insert.php">Insert (i)</a>
         </li>
         
       </ul>
